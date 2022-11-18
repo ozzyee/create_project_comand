@@ -1,0 +1,14 @@
+{
+  "templates": {
+    "next": {
+      "location": "repos/ozzyee/next_js_with_ts"
+    },
+    "wp": {
+      "location": "repos/ozzyee/wordpress"
+    }
+  },
+  "repoMsg": "First commit",
+  "reposIsPublic": false,
+  "repoOwner": "ozzyee",
+  "repoIncludeAllBranches": false
+}
