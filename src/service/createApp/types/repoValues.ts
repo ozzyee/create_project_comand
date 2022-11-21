@@ -4,6 +4,7 @@ export type TRepoDetails = {
     repoVisibility: boolean,
     owner: string,
     includeAllBranches: boolean,
-    template: "next" | "wp"
+    template: "next" | "wp",
+    chanelName: string
 }
 

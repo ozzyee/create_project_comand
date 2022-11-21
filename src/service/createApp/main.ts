@@ -1,6 +1,9 @@
 import {ApiInput} from "../../types/apiInput";
 import {getInputValues} from "./helper/getInputValues";
 import {BuildRepoService} from "./methods/buildRepo";
+import {LogLevel, WebClient} from "@slack/web-api";
+import {slackChanelService} from "./methods/createSlackChanel";
+
 
 export class CreateAppService {
     static async createApp({req, res}: ApiInput) {
@@ -8,8 +11,11 @@ export class CreateAppService {
         const repoValues = getInputValues(req.body);
 
         // create repo with input values
-        const response = await BuildRepoService.buildRepo(repoValues);
+        // const response = await BuildRepoService.buildRepo(repoValues);
 
+        // create a new atlassian jira project
 
+        // create slack chanel with input values
+        // const slackResponse = await slackChanelService.createSlackChanel(repoValues.chanelName);
     }
 }

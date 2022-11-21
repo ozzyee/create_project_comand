@@ -1,5 +1,6 @@
 import {TRepoDetails} from "../types/repoValues";
 import config from "../../../../config/config.json";
+import "isomorphic-fetch";
 
 export class BuildRepoService {
     static async buildRepo({

@@ -1,6 +1,7 @@
 import {SlackPayload} from "../../../types/slackPayload";
 import {SlackInputs} from "../../../types/SlackInputs";
 import config from '../../../../config/config.json';
+import {TRepoDetails} from "../types/repoValues";
 
 export function getInputValues(input: SlackPayload): TRepoDetails {
     // get input values from slack payload
@@ -27,12 +28,13 @@ export function getInputValues(input: SlackPayload): TRepoDetails {
     }
 
     // return the values
-    return {
+    return <TRepoDetails>{
         repoName: values.repoName ?? values.name,
         repoDescription: config.repoMsg,
         repoVisibility: config.reposIsPublic,
         owner: config.repoOwner,
         includeAllBranches: config.repoIncludeAllBranches,
-        template: values.type
+        template: values.type,
+        chanelName: values.name
     }
 }
